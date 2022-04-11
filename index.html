@@ -14,17 +14,17 @@
     <title>Página de start do BCW18</title>
 </head>
 
-<body style="font-family: Roboto;">
+<body>
     <header>
-        <nav>
-            <a href="#somos">Quem somos neste <strong>BCW18</strong></a> |
-            <a href="#cronograma">Cronograma do <strong>BCW18</strong></a> |
-            <a href="#dicas">Dicas do team <strong>BCW18</strong></a> |
-            <a href="#orientacoes">Orientações de trabalho como Dev</a>
-        </nav>
+        <ul>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#trajetoria">Trajetória</a></li>
+            <li><a href="#dicas">Dicas</a></li>
+            <li><a href="#orientacoes">Orientações</a></li>
+        </ul>
     </header>
     <main>
-        <div style="width: 650px;">
+        <div class="divisorbase" id="trajetoria">
             <h1>Trajetória de Sucesso</h1>
             <table>
                 <tr>
@@ -69,6 +69,61 @@
                     </td>
                 </tr>
             </table>
+        </div>
+        <div class="divisorbase" id="cadastro">
+            <form action="#" method="get">
+                <div>
+                    <input type="hidden" id="id">
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Entre com seu nome">
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Entre com seu e-mail">
+                </div>
+                <div>
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento">
+                </div>
+                <div>
+                    <input type="checkbox" id="deficiencia" checked>
+                    <label for="deficiencia">Deficiência</label>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder="Entre com a sua senha" maxlength="14">
+                </div>
+                <div>
+                    <label for="escolaridade">Nível de escolaridade:</label> <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="F1"> Fundamental <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="M1"> Médio <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="B1"> Bacharel <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="T1"> Tecnólogo <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="L1"> Licenciado <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="P1"> Pós-graduado <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="P2"> Mestrado <br>
+                    <input type="radio" name="escolaridade" id="escolaridade" value="P3"> Doutorado <br>
+                </div>
+                <div>
+                    <label for="experiencia">Qual foi sua experiência com programação:</label>
+                    <input type="range" id="experiencia" min="5" max="50" oninput="display.value=value"
+                        onchange="display.value=value">
+                    <input type="text" id="display" value="0" oninput="experiencia.value=value"
+                        onchange="experiencia.value=value" maxlength="3" size="3">
+                </div>
+                <div>
+                    <label for="descricao">Descrição da experiência:</label> <br>
+                    <textarea id="descricao" cols="70" rows="5" placeholder="Descreva as tecnologias conhecidas">
+
+                    </textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
         </div>
     </main>
     <footer>
