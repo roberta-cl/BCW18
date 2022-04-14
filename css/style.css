@@ -182,6 +182,31 @@ input[type=reset]:hover {
     font-weight: bold;
 }
 
+.footerSocial {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footerSocial>div {
+    width: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footerSocial>div>img {
+    width: 40px;
+}
+
+.footerSocial>div>img:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.footerSocial>div>p {
+    font-size: 14px;
+}
+
 @media screen and (max-width: 400px) {
 
     .leftColumn,
@@ -197,13 +222,15 @@ input[type=reset]:hover {
 }
 
 @media screen and (max-width: 600px) {
+
     .col-20,
     .col-70,
     input[type=submit],
-    input[type=reset]{
+    input[type=reset] {
         width: 100%;
         margin-top: 0px;
     }
+
     .column {
         width: 100%;
     }
